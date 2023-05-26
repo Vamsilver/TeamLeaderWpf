@@ -1,0 +1,112 @@
+﻿<Application x:Class="TeamLeaderWpf.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TeamLeaderWpf"
+             StartupUri="MainWindow.xaml"
+             Exit="Application_Exit">
+    <Application.Resources>
+        <Style x:Key="DarkBlueButton" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#005095"/>
+            <Setter Property="FontFamily" Value="CustomFonts/#Inter-Light"/>
+            <!--<Setter Property="" Value=""/>-->
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style x:Key="WhiteButton" TargetType="Button">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="FontFamily" Value="CustomFonts/#Inter-Light"/>
+            <!--<Setter Property="" Value=""/>-->
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                    <Setter Property="BorderBrush" Value="White"/>
+                    <Setter Property="Background" Value="White"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style x:Key="ComboBox" TargetType="ComboBox">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="FontFamily" Value="CustomFonts/#Inter-Light"/>
+            <!--<Setter Property="" Value=""/>-->
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                    <Setter Property="BorderBrush" Value="White"/>
+                    <Setter Property="Background" Value="White"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style x:Key="GreyTextBox" TargetType="TextBox">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Style.Resources>
+            <Setter Property="Background" Value="#D9D9D9"/>
+            <Setter Property="Foreground" Value="#857979"/>
+            <Setter Property="Padding" Value="8, 0, 0 ,0"/>
+            <Setter Property="FontFamily" Value="CustomFonts/#Inter-Light"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" CornerRadius="15" BorderBrush="#D9D9D9" BorderThickness="{TemplateBinding BorderThickness}" Background="#D9D9D9" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="PasswordBox" TargetType="{x:Type PasswordBox}">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15" />
+                </Style>
+            </Style.Resources>
+            <Setter Property="Padding" Value="8, 0, 0 ,0"/>
+            <Setter Property="Foreground" Value="#857979"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type PasswordBox}">
+                        <Border x:Name="border" CornerRadius="15" BorderBrush="#D9D9D9" BorderThickness="{TemplateBinding BorderThickness}" Background="#D9D9D9" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="TextBlock" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="CustomFonts/#Inter-Light"/>
+        </Style>
+
+        <!--<Style x:Name="ItemGroup" TargetType="{x:Type ListBoxItem}">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#D8D8D8"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="400"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                        <Border CornerRadius="15" BorderBrush="#D9D9D9" BorderThickness="{TemplateBinding BorderThickness}" Background="#D9D9D9" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            --><!--and so on whatever you want...--><!--
+        </Style>-->
+        
+    </Application.Resources>
+</Application>

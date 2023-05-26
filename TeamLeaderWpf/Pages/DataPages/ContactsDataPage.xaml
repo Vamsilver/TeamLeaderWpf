@@ -1,0 +1,48 @@
+﻿<Page x:Class="TeamLeaderWpf.Pages.DataPages.ContactsDataPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TeamLeaderWpf.Pages.DataPages"
+      xmlns:custom="clr-namespace:TeamLeaderWpf"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1080"
+      Title="ContactsDataPage">
+
+    <Grid>
+
+        <DataGrid x:Name="studentsDataGrid" Loaded="studentsDataGrid_Loaded" IsReadOnly="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserSortColumns="True" AutoGenerateColumns="False"  ScrollViewer.CanContentScroll="True" 
+      ScrollViewer.VerticalScrollBarVisibility="Auto"
+      ScrollViewer.HorizontalScrollBarVisibility="Visible" SelectionChanged="studentsDataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="№ п/п" Width="Auto"   Binding="{Binding Path=OrderNumber}" />
+                <DataGridTextColumn Header="Фамилия" Width="Auto" Binding="{Binding Path=LastName}" />
+                <DataGridTextColumn Header="Имя" Width="Auto"  Binding="{Binding Path=FirstName}" />
+                <DataGridTextColumn Header="Отчество" Width="Auto" Binding="{Binding Path=MiddleName}" />
+                <DataGridTextColumn Header="Пол" Width="Auto" Binding="{Binding Path=Gender}" />
+                <DataGridTextColumn Header="Дата рождения" Width="Auto" Binding="{custom:CultureAwareBinding Path=BirthDate, StringFormat=dd.MM.yyyy}" />
+                <DataGridTextColumn Header="Место рождения" Width="Auto" Binding="{Binding Path=BirthPlace}" />
+                <DataGridTextColumn Header="Почтовый индекс" Width="Auto" Binding="{Binding Path=PostCode}" />
+                <DataGridTextColumn  Width="Auto" Binding="{Binding Path=DistrictByRegistartion}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock HorizontalAlignment="Center" TextAlignment="Center">Административный<LineBreak/>(муниципальный)<LineBreak/>район по прописке</TextBlock>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Адрес по прописке" Width="Auto" Binding="{Binding Path=RegisteredAddress}" />
+                <DataGridTextColumn Header="Адрес проживания" Width="Auto" Binding="{Binding Path=ResidenceAddress}" />
+                <DataGridTextColumn Header="Гражданство" Width="Auto"  Binding="{Binding Path=Citizenship}" />
+                <DataGridTextColumn Header="Паспортные данные" Width="Auto"  Binding="{Binding Path=PassportData}" />
+                <DataGridTextColumn Header="ИНН" Width="Auto"  Binding="{Binding Path=ITN}" />
+                <DataGridTextColumn Header="Страховое свидетельство" Width="Auto"   Binding="{Binding Path=INLILA}" />
+                <DataGridTextColumn Header="Медицинский полис" Width="Auto"  Binding="{Binding Path=MedicalPolicy}" />
+                <DataGridTextColumn Header="Телефон обучающегося" Width="Auto"  Binding="{Binding Path=PhoneNumber}" />
+                <DataGridTextColumn Header="ФИО папы" Width="Auto"  Binding="{Binding Path=FatherFullName}" />
+                <DataGridTextColumn Header="Телефон папы" Width="Auto" Binding="{Binding Path=FatherPhonNumber}" />
+                <DataGridTextColumn Header="ФИО мамы" Width="Auto"  Binding="{Binding Path=MotherFullName}" />
+                <DataGridTextColumn Header="Телефон мамы" Width="Auto"  Binding="{Binding Path=MotherPhonNumber}" />
+            </DataGrid.Columns>
+               
+        </DataGrid>
+
+    </Grid>
+</Page>

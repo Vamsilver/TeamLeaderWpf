@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Pages\Images\ktits.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Pages\Images\AuthKtits.jpg" />
+    <None Remove="Pages\Images\BackBtn.png" />
+    <None Remove="Pages\Images\CreateFile.png" />
+    <None Remove="Pages\Images\OpenFile.png" />
+    <None Remove="Pages\Images\refresh.png" />
+    <None Remove="Pages\Images\SaveChanges.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Pages\Images\ktits.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Pages\Images\OpenFile.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CustomFonts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.Cells" Version="23.3.0" />
+    <PackageReference Include="ClosedXML" Version="0.100.3" />
+    <PackageReference Include="ExcelDataReader" Version="3.6.0" />
+    <PackageReference Include="ExcelDataReader.DataSet" Version="3.6.0" />
+    <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1001" />
+    <PackageReference Include="MongoDB.Bson" Version="2.19.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.19.0" />
+    <PackageReference Include="Syncfusion.SfSpreadsheet.WPF" Version="21.2.5" />
+    <PackageReference Include="System.Data.OleDb" Version="7.0.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Pages\Images\AuthKtits.jpg" />
+    <Resource Include="Pages\Images\BackBtn.png" />
+    <Resource Include="Pages\Images\CreateFile.png" />
+    <Resource Include="Pages\Images\refresh.png" />
+    <Resource Include="Pages\Images\SaveChanges.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Pages\RegistrationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
